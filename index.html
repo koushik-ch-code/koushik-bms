@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bookmyshow</title>
+    <link rel="icon" type="image/png" href="https://p7.hiclipart.com/preview/919/445/291/bookmyshow-office-android-ticket-android.jpg" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,6 +18,9 @@
         }
         a{
             text-decoration: none;
+        }
+        *{
+            font-family: sans-serif;
         }
         .navbar {
             display: flex;
@@ -38,10 +42,14 @@
         }
 
         .city {
-            width: 10%;
+
             border: none;
             padding-bottom: 5px;
             margin-left: 10px;
+        }
+        .nav-search{
+            display: flex;
+            justify-content: space-between;
         }
         .navbar2{
             background-color: #f5f5f5;
@@ -61,8 +69,11 @@
             padding: 1%;
         }
         .movies{
-            display: flex;
-            justify-content: space-around;
+            /* display: flex;
+            justify-content: space-around; */
+         display: grid;
+         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));  
+         
         }
         .movies img{
             width: 200px;
@@ -72,8 +83,10 @@
             padding: 2%;
         }
         .events{
-            display: flex;
-            justify-content: space-around;
+            /* display: flex;
+            justify-content: space-around; */
+            display: grid;
+         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
         }
         .events img{
             width: 200px;
@@ -81,8 +94,10 @@
             padding: 2%;
         }
         .posters{
-            display: flex;
-            justify-content: space-around;
+            /* display: flex;
+            justify-content: space-around; */
+            display: grid;
+         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
         }
         .posters img{
             width: 200px;
@@ -101,6 +116,33 @@
         .premiere-poster{
             padding-left: 3%;
         }
+        @media (max-width:468px){
+            .movies{
+            margin-left: 20px;
+           
+         
+        } 
+            .events{
+                margin-left: 20px;
+            }
+            .posters{
+                margin-left: 20px;
+            }
+        }
+        @media (min-width:768px){
+            .movies{
+            margin-left: 50px;  
+         
+        } 
+            .events{
+                margin-left: 50px;
+            }
+            .posters{
+                margin-left: 50px;
+            }
+}
+
+
     </style>
 </head>
 
@@ -111,13 +153,13 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <input placeholder="Search for Movies, Events, Plays, Sports and Activities">
         </div>
-        <div>
+        <div class="nav-search">
             <select class="city">
                 <option value="">Search for your city</option>
                 <option value="vjy">Vijayawada</option>
                 <option value="delhi">Delhi</option>
             </select>
-            <a href=""><img src="bms3.PNG" alt=""></a>
+            <a href=""><img  src="bms3.PNG" alt=""></a>
         </div>
     </nav>
     <nav class="navbar2">
@@ -133,11 +175,11 @@
         <a href="">Gift Cards</a>
     </nav>
     <nav class="navbar3">
-        <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1720788384033_partyxfreedomwebshowcase1240x300.jpg" alt="" class="img-center">
+        <img width="100%" src="https://assets-in.bmscdn.com/promotions/cms/creatives/1720788384033_partyxfreedomwebshowcase1240x300.jpg" alt="" class="img-center">
     </nav>
     <div class="recommended-movies">
         <h1><b>Recommended Movies</b></h1>
-        <nav class="movies">
+        <div class="movies">
             <a href=""><img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC45LzEwICAzNy40SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00341295-ddzlugnyvk-portrait.jpg" alt="">
                 <p><b>Deadpool & Wolverine</b> <br>Action/Adventure/Comedy </p>
             </a>
@@ -153,17 +195,17 @@
             <a href=""><img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC41LzEwICA0NS43SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00379741-wjbktbddtu-portrait.jpg" alt="">
                 <p><b>Kung Fu Panda 4</b> <br>Adventure/Comedy</p>
             </a>
-        </nav>
+        </div>
         <nav class="navbar4">
             <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/stream-leadin-web-collection-202210241242.png" alt="" class="img-center" width="95%">
         </nav>
         <h1><b>The Best Of Live Events</b></h1>
         <nav class="events">
-            <a href=""><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-amusement-park-collection-202404190106.png" alt=""></a>
-            <a href=""><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NDArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png" alt=""></a>
-            <a href=""><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTAgRXZlbnRz,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-kids-collection-202404190106.png" alt=""></a>
-            <a href=""><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NzArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png" alt=""></a>
-            <a href=""><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NDUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png" alt=""></a>
+            <a href=""><img width="100%" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-amusement-park-collection-202404190106.png" alt=""></a>
+            <a href=""><img width="100%" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NDArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png" alt=""></a>
+            <a href=""><img width="100%" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTAgRXZlbnRz,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-kids-collection-202404190106.png" alt=""></a>
+            <a href=""><img width="100%" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NzArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png" alt=""></a>
+            <a href=""><img width="100%" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NDUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png" alt=""></a>
         </nav>
     </div>
     <div class="premiere">
